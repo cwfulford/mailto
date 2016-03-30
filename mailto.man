@@ -1,0 +1,58 @@
+.TH MAILTO 8l "18 May r
+.SH NAME
+.B mailto
+- wrapper script to invoke mutt from firefox \fBmailto:\fR URIs.
+.SH SYNOPSIS
+\fBmailto\fR
+[\fB-c \fI<config_file>\fR]
+[\fB-d\fR]
+[\fB-v \fR]
+.br
+.SH AVAILABILITY
+.B mailto
+is a Bourne shell script which should work equally well on all versions of UNIX,
+Linux and Mac OS X.
+.SH DESCRIPTION
+.B mailto
+passes the parameters from the 
+.B mailto: 
+URI to a virtual terminal running
+.BR mutt .
+.SH OPTIONS
+.TP 5
+.B -c
+Use the specified configuration file in preference to the default
+\fI"/usr/local/etc/mailto.cf"\fR.
+If no configuration file is found the 
+script will continue with the default 
+.B MUA mutt
+running in
+.BR terminal  " "
+.TP 5
+.B -d
+Set debug mode on. 
+The \fB-x\fR option is set within the shell
+and each command in the script is echoed to the console.
+.TP 5
+.B -v
+Doesn't do anything at all at present and probably never will.
+report.
+.SH FILES
+.IR mailto.cf .
+.SH EXAMPLES
+.IP
+.ft CW
+	/usr/local/bin/mailto 
+.ft R
+.LP
+In 
+.B firefox prefences, applications, mailto, Use other ..., just type in
+the full path name to the script as above.
+.SH BUGS
+The script is quite crude and has very little, if any,  error checking.
+The consequences of unexpected input are untested.
+.SH SEE ALSO
+.IR webupd .
+.SH AUTHOR
+Clifford W Fulford, City Linux. Contact fulford@fulford.net or +44 (0)709 229 5385.
+.SH HISTORY
